@@ -108,3 +108,19 @@ cm_df = pd.DataFrame(cm, index=['Actual_0', 'Actual_1'], columns=['Pred_0', 'Pre
 from imblearn.metrics import classification_report_imbalanced
 cri = classification_report_imbalanced(y_test, y_pred)
 
+![oversampling_results](https://user-images.githubusercontent.com/95897182/164316763-60b57b71-6a3c-411c-b9fc-2f772593014c.png)
+
+
+Model 2- Smote Oversampling 
+This is the second model in which utilized oversampling. There are data points from the minority set that then leads to oversampled and new data points into existing data points. Then there are new values that are created and add to the sample sets. 
+
+# Resample the training data with SMOTE
+from imblearn.over_sampling import SMOTE
+X_resampled, y_resampled = SMOTE(random_state=12,
+                                 sampling_strategy='auto').fit_resample(X_train, y_train)
+Counter(y_resampled)
+
+Smote Results of machine learning were: 
+
+
+
