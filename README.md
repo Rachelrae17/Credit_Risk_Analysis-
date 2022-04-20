@@ -178,6 +178,16 @@ rf_classifier = rf_classifier.fit(X_train_scaled, y_train)
 
 ![randfor_results](https://user-images.githubusercontent.com/95897182/164327520-ae225d6e-9d5c-42e5-86d9-9172c41039ab.png)
 
+In Addition benefit to using Random Forest Model Target With This Algorithm. 
+
+# List the features sorted in descending order by feature importance
+importances = sorted(zip(rf_classifier.feature_importances_, X.columns), reverse=False)
+featured_scores = pd.DataFrame(importances, columns=['Importance', 'Features']).sort_values('Importance', ascending=False)
+featured_scores = featured_scores[featured_scores.columns[::-1]]
+featured_scores
+
+
+
 
 
 
