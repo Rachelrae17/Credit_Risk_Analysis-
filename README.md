@@ -186,6 +186,19 @@ featured_scores = pd.DataFrame(importances, columns=['Importance', 'Features']).
 featured_scores = featured_scores[featured_scores.columns[::-1]]
 featured_scores
 
+![randfor_featurelist](https://user-images.githubusercontent.com/95897182/164333740-a8bc9ab1-5909-414a-9b88-a09e68d2ae5b.png)
+
+
+Model 6- Easy Ensemble Adaboost Classifier 
+
+In this last model the algorithn that will create a model for the dataset that then will evaluate the errors, from the first model. 
+
+# Train the EasyEnsembleClassifier
+from imblearn.ensemble import EasyEnsembleClassifier
+eec_classifier = EasyEnsembleClassifier(n_estimators=100, random_state=12)
+eec_classifier = eec_classifier.fit(X_train_scaled, y_train)
+
+
 
 
 
