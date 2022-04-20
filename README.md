@@ -149,6 +149,35 @@ smote_enn = SMOTEENN(random_state=12)
 X_resampled, y_resampled = smote_enn.fit_resample(X, y)
 Counter(y_resampled)
 
+![smoteenn_results](https://user-images.githubusercontent.com/95897182/164325833-7dc45069-05db-4204-a36f-ee9cfef375ca.png)
+
+Model 5- Balanced Random Forest Classifier 
+This Model is different than previous. This focuses on ensemble learning model in which multiple simple decision are combined to build a strong learning model. 
+
+# import StandardScaler
+from sklearn.preprocessing import StandardScaler
+
+# create Standard Scaler instance
+scaler = StandardScaler()
+
+# fit the scaler
+X_scaler = scaler.fit(X_train)
+
+# scale data
+X_train_scaled = X_scaler.transform(X_train)
+X_test_scaled = X_scaler.transform(X_test)
+
+This data is Resampled and Fit 
+
+# Resample the training data with the BalancedRandomForestClassifier
+from imblearn.ensemble import BalancedRandomForestClassifier
+rf_classifier = BalancedRandomForestClassifier(n_estimators=100, random_state=12)
+
+# fit the model
+rf_classifier = rf_classifier.fit(X_train_scaled, y_train)
+
+
+
 
 
 
