@@ -137,6 +137,20 @@ Counter(y_resampled)
 
 Results were 255 data points in each classification set. 
 
+![cc_results](https://user-images.githubusercontent.com/95897182/164323192-39e69d7b-859f-4478-9ff6-8fef6a6dbb60.png)
+
+
+Model 4- Smoteen Combination Sampling 
+In This Model the combines undersampling techniques are used. The Minority of class is oversampled by using the Smote tecnique algorithm. 
+
+# Resample the training data with SMOTEENN
+from imblearn.combine import SMOTEENN
+smote_enn = SMOTEENN(random_state=12)
+X_resampled, y_resampled = smote_enn.fit_resample(X, y)
+Counter(y_resampled)
+
+
+
 
 
 
