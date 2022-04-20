@@ -176,6 +176,10 @@ rf_classifier = BalancedRandomForestClassifier(n_estimators=100, random_state=12
 # fit the model
 rf_classifier = rf_classifier.fit(X_train_scaled, y_train)
 
+![randfor_results](https://user-images.githubusercontent.com/95897182/164327520-ae225d6e-9d5c-42e5-86d9-9172c41039ab.png)
+
+
+
 
 
 
