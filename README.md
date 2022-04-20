@@ -123,4 +123,23 @@ Counter(y_resampled)
 Smote Results of machine learning were: 
 
 
+![smote_results](https://user-images.githubusercontent.com/95897182/164318777-5132e1ef-d862-4559-9df9-f6f4457a4348.png)
+
+Model 3- Cluster Centroids Undersampling 
+
+In this model works by undersampling with the majority set. This Algorithm identifies as a cluster in the majority class then generates synthetic, data points which are called centriods, that are representative of clusters. The majority class is called undersampled down to the size of minority class. 
+
+# Resample the data using the ClusterCentroids resampler
+from imblearn.under_sampling import ClusterCentroids
+cc = ClusterCentroids(random_state=12)
+X_resampled, y_resampled = cc.fit_resample(X_train, y_train)
+Counter(y_resampled)
+
+Results were 255 data points in each classification set. 
+
+
+
+
+
+
 
