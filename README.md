@@ -198,6 +198,14 @@ from imblearn.ensemble import EasyEnsembleClassifier
 eec_classifier = EasyEnsembleClassifier(n_estimators=100, random_state=12)
 eec_classifier = eec_classifier.fit(X_train_scaled, y_train)
 
+![eeac_results](https://user-images.githubusercontent.com/95897182/164334759-fa940865-94b8-486b-b031-c6ba13311d9c.png)
+
+Summary: 
+All six of the models that were solved using algorithm. One through four models were used with applying, oversampling and undersampling or both. When using these algorithms for these four samples the best score was at a 62%. 
+The fifth model for balance random forest classifier model score was 77.1%, this is higher than the first four models. 
+The sixth model the easy Ensemble AdaBoost Classififer Model was the Best performing Model. This score was at 90.2%. The recall for low-risk was 0.96,Recall for high risk fraudulent charges was at 0.85 with support of 92 cases in the test set that was applied. For this project the model six the easy Ensemble AdaBoost model was the most supported and best choice for the Machine Learning approach In the LendingClub Credit Cards analysis. 
+ 
+
 
 
 
